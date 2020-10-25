@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark">
-      <b-img :src="require('@/assets/img/logo.png')" width="250"></b-img>
+      <b-img :src="require('@/assets/img/logo.png')" width="50"></b-img>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

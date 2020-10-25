@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <LoadLayout>
+    <!-- <LoadLayout>
       <BaseLoading />
-    </LoadLayout>
+    </LoadLayout> -->
 
-    <MainLayout/>
+    <MainLayout />
   </div>
 </template>
 
 <script>
-import LoadLayout from './layouts/LoadLayout'
-import MainLayout from './layouts/MainLayout'
-import BaseLoading from './components/BaseLoading'
+// import LoadLayout from './layouts/LoadLayout'
+import MainLayout from './layouts/MainLayout.vue'
+// import BaseLoading from './components/BaseLoading'
 export default {
   name: 'App',
-  components: { MainLayout, LoadLayout, BaseLoading }
+  components: { MainLayout }
 }
 </script>
 
@@ -24,6 +24,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(247, 245, 245);
+  background: #15202b;
 }
 </style>
