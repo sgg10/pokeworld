@@ -2,7 +2,7 @@ import { auth, firestore } from 'firebase'
 
 const createUser = async (email, pass, displayName) => {
   const user = (await auth().createUserWithEmailAndPassword(email, pass)).user
-  await user.updatePhoneNumber({ displayName })
+  await user.updateProfile({ displayName })
   return user
 }
 

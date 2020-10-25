@@ -21,4 +21,6 @@ const deleteFavoritesPokemon = async (id, pokemon) => {
   return false
 }
 
-export { addFavoritesPokemon, deleteFavoritesPokemon }
+const getFavorites = async id => (await getPokeTrainerData(id)).data().favorites_pokemons
+
+export { addFavoritesPokemon, deleteFavoritesPokemon, getFavorites }

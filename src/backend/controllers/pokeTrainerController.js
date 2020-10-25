@@ -9,6 +9,6 @@ const getCurrentUser = () => getUSer()
 
 const login = async (email, pass) => (await sigIn(email, pass)).user
 
-const logout = async () => await signOut()
+const logout = () => signOut()
 
 export { createNewPokeTrainer, getCurrentUser, login, logout }

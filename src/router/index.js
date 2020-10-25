@@ -7,6 +7,8 @@ const routerOptions = [
   { path: '/', name: 'Home' },
   { path: '/about', name: 'About' },
   { path: '/pokemon/:id', name: 'Pokemon' },
+  { path: '/login', name: 'Login' },
+  { path: '/register', name: 'Register' },
   { path: '*', redirect: { name: 'Home' } }
 ]
 

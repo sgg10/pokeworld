@@ -1,24 +1,14 @@
 <template>
   <div id="app">
-    <LoadLayout v-if="isLoading">
-      <BaseLoading />
-    </LoadLayout>
-
-    <MainLayout v-else />
+    <MainLayout/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import LoadLayout from './layouts/LoadLayout'
 import MainLayout from './layouts/MainLayout.vue'
-import BaseLoading from './components/BaseLoading'
 export default {
   name: 'App',
-  components: { MainLayout, LoadLayout, BaseLoading },
-  computed: {
-    ...mapState('loading', { isLoading: 'isLoading' })
-  }
+  components: { MainLayout }
 }
 </script>
 
