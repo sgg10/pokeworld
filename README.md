@@ -1,4 +1,4 @@
-# pokeworld
+# PokeWorld
 
 ## Project setup
 ```
