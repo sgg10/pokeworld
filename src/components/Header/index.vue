@@ -17,8 +17,8 @@
             <template #button-content>
               <b-avatar></b-avatar>
             </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            <b-dropdown-item @click="$router.push({ name: 'Favorites' })">Favorites Pokemons</b-dropdown-item>
+            <b-dropdown-item @click="logout">Sign Out</b-dropdown-item>
           </b-nav-item-dropdown>
           <div v-else>
             <b-button variant="success" @click="$router.push({ name: 'Login' })" class="mx-2">Login</b-button>
