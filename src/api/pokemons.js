@@ -2,19 +2,12 @@ import { get } from 'axios'
 
 const BASE_URL = 'https://pokeapi.co/api/v2'
 
-function getPokemons (from, limit) {
-  const url = `${BASE_URL}/pokemon/?offset=${from}&limit=${limit}`
-  return get(url)
-}
+const getPokemons = (from, limit) => get(`${BASE_URL}/pokemon/?offset=${from}&limit=${limit}`)
 
-function getPokemon (id) {
-  const url = `${BASE_URL}/pokemon/${id}`
-  return get(url)
-}
+const getPokemon = id => get(`${BASE_URL}/pokemon/${id}`)
 
-function getPokemonEvolution (id) {
-  const url = `${BASE_URL}/evolution-chain/${id}`
-  return get(url)
-}
+const getPokemonEvolution = id => get(`${BASE_URL}/evolution-chain/${id}`)
 
-export { getPokemons, getPokemon, getPokemonEvolution }
+const getPokemonsByType = type => get(`${BASE_URL}/type/${type}`)
+
+export { getPokemons, getPokemon, getPokemonEvolution, getPokemonsByType }
