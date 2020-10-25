@@ -1,5 +1,5 @@
 <template>
-  <div class="item mx-1 my-2" style="cursor: pointer;">
+  <div @click="goPokemon(item.id)" class="item mx-1 my-2" style="cursor: pointer;">
     <b-row>
       <b-col>
         <b-img :src="item.sprites.front_default" />
@@ -31,96 +31,15 @@ export default {
     getClass () {
       return true
     }
+  },
+  methods: {
+    goPokemon (id) {
+      this.$router.push({ path: `/pokemon/${id}` })
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  div{
-    border-radius: 5px;
-    color: white;
-  }
-
-  .grass{
-    background-color: #9BCC50;
-    color: black;
-  }
-
-  .poison{
-    background-color: #B97FC9;
-  }
-
-  .fire{
-    background-color: #FD7D24;
-  }
-
-  .water{
-    background-color: #4592C4;
-  }
-
-  .bug{
-    background-color: #729F3F;
-  }
-
-  .normal{
-    background-color: #A4ACAF;
-  }
-
-  .normal{
-    background-color: #A4ACAF;
-  }
-
-  .electric{
-    background-color: #EED535;
-    color: black;
-  }
-
-  .fairy{
-    background-color: #FDB9E9;
-    color: black;
-  }
-
-  .steel{
-    background-color:#9EB7B8;
-    color: black;
-  }
-
-  .ice{
-    background-color: #51C4E7;
-    color: black;
-  }
-
-  .fighting{
-    background-color:#D56723;
-  }
-
-  .ghost{
-    background-color:#7B62A3;
-  }
-
-  .psychic{
-    background-color: #F366B9;
-  }
-
-  .dark{
-    background-color:#707070;
-  }
-
-  .rock{
-    background-color: #A38C21;
-  }
-
-  .flying{
-    background: linear-gradient(#3DC7EF, #BDB9B8);
-    color: black;
-  }
-
-  .ground{
-    background: linear-gradient(#F7DE3F,#AB9842);
-    color: black;
-  }
-
-  .dragon{
-    background: linear-gradient(#53A4CF,#F16E57);
-  }
+@import '../assets/css/colorsType.scss';
 </style>

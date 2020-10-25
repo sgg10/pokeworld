@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 const routerOptions = [
   { path: '/', name: 'Home' },
   { path: '/about', name: 'About' },
+  { path: '/pokemon/:id', name: 'Pokemon' },
   { path: '*', redirect: { name: 'Home' } }
 ]
 

@@ -49,12 +49,16 @@ export default {
       }
     },
     async searchPokemons (from) {
-      const result = (await getPokemons(from, 20)).data
-      let pokemons = result.results.map(pokemon => parseInt(pokemon.url.split('/')[6]))
-      pokemons = pokemons.map(pokemon => getPokemon(pokemon))
-      pokemons = await Promise.all(pokemons)
-      this.pokemons = pokemons.map(pokemon => pokemon.data)
-      this.getPrev_Next(result)
+      try {
+        const result = (await getPokemons(from, 20)).data
+        let pokemons = result.results.map(pokemon => parseInt(pokemon.url.split('/')[6]))
+        pokemons = pokemons.map(pokemon => getPokemon(pokemon))
+        pokemons = await Promise.all(pokemons)
+        this.pokemons = pokemons.map(pokemon => pokemon.data)
+        this.getPrev_Next(result)
+      } catch (error) {
+        console.error(error)
+      }
     }
 
   },
